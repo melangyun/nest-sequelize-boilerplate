@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
 
-import { ConfigService } from './../shared/config/config.service';
+import { ConfigService } from '../shared/config/config.service';
 
 export const databaseProviders = [
     {
