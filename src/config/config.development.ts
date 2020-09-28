@@ -8,7 +8,10 @@ export const config = {
         username: 'root',
         password: '1112',
         database: 'sample',
-        logging: false,
+        synchronize: true,
+        logging: msg => {
+            console.log(msg);
+          },
     },
     jwtPrivateKey: 'jwtPrivateKey',
 };
