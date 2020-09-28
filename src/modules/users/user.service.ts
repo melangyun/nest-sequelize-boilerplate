@@ -1,15 +1,13 @@
-import { Injectable, Inject } from '@nestjs/common';
-import { User } from './user.entity';
-import { InjectModel } from '@nestjs/sequelize';
+import { Injectable } from '@nestjs/common';
+import { UserModel } from './user.model';
 
 @Injectable()
 export class UsersService {
     constructor(
-            @Inject('UsersRepository')
-            private readonly usersRepository: typeof User,
+        private readonly userModel : UserModel,
     ){}
 
     findAll(){
-        return this.usersRepository.findAll();
+        return this.userModel.findAll();
     }
 }
