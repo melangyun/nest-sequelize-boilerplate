@@ -3,12 +3,12 @@ import { User } from './user.entity';
 
 @Injectable()
 export class UserModel {
-    constructor(
-        @Inject('UsersRepository')
-        private readonly usersRepository: typeof User,
-    ){}
+  constructor(
+    @Inject('UsersRepository')
+    private readonly usersRepository: typeof User,
+  ) {}
 
-    findAll(){
-        return this.usersRepository.findAll();
-    }
+  findAll() {
+    return this.usersRepository.findAll();
+  }
 }

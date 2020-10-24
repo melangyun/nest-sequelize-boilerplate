@@ -3,11 +3,9 @@ import { UserModel } from './user.model';
 
 @Injectable()
 export class UsersService {
-    constructor(
-        private readonly userModel : UserModel,
-    ){}
+  constructor(private readonly userModel: UserModel) {}
 
-    findAll(){
-        return this.userModel.findAll();
-    }
+  findAll() {
+    return this.userModel.findAll();
+  }
 }
