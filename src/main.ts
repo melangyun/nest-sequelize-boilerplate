@@ -7,10 +7,10 @@ declare const module: any;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const nodeEnv = process.env.NODE_ENV;
+  const configEnv = process.env.CONFIG_ENV;
   // app.useGlobalPipes(new ValidationPipe());
   SentryInit({
-    dsn: nodeEnv ? process.env.SENTRY_DNS : '',
+    dsn: configEnv ? process.env.SENTRY_DNS : '',
   });
   app.useGlobalInterceptors(new LoggingInterceptor());
   await app.listen(3000);
